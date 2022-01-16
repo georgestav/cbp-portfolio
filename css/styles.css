@@ -78,6 +78,7 @@ header {
 }
 
 .header__links__container {
+	position: relative;
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;
@@ -95,10 +96,14 @@ header {
 	background-color: var(--main-theme);
 	color: var(--main-dark-gray);
 }
+.header__container {
+	position: relative;
+}
 
 .header__main__container {
-	background-color: var(--main-dark-gray);
-	height: 400px;
+	width: 100%;
+	position: absolute;
+	bottom: 45%;
 
 	display: flex;
 	flex-direction: column;
