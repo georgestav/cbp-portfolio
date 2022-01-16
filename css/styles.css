@@ -1,5 +1,5 @@
 :root {
-	--main-green: #54be90;
+	--main-theme: #1b8dda;
 	--main-white: #fff;
 	--main-light-gray: #ebebeb;
 	--main-text-gray: #444;
@@ -29,7 +29,7 @@ body {
 .custom--button {
 	margin: 25%;
 	text-decoration: none;
-	background-color: var(--main-green);
+	background-color: var(--main-theme);
 	color: var(--main-light-gray);
 	padding: 0.5em 3em;
 	border-radius: 5px;
@@ -55,9 +55,26 @@ header {
 }
 
 .logo {
-	height: 32px;
-	width: 64px;
-	background-color: var(--main-text-gray);
+	padding: 0 0.25em;
+	font-size: 2.5em;
+	color: var(--main-text-gray);
+	font-family: monospace;
+	font-weight: bolder;
+}
+.logo::after {
+	content: "_";
+	animation: blink 1.2s linear infinite;
+}
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 .header__links__container {
@@ -75,7 +92,7 @@ header {
 
 .header__links__container a:hover {
 	transition: 0.3s ease-in-out;
-	background-color: var(--main-green);
+	background-color: var(--main-theme);
 	color: var(--main-dark-gray);
 }
 
@@ -104,7 +121,7 @@ h1 {
 	bottom: 5px;
 	padding-bottom: 4px;
 	font-size: 1.3em;
-	color: var(--main-green);
+	color: var(--main-theme);
 	border-bottom: 5px solid var(--main-light-gray);
 }
 
@@ -150,7 +167,7 @@ h1 {
 .features__feature__title {
 	margin: 15px 0 0 0;
 	font-size: 1.4em;
-	color: var(--main-green);
+	color: var(--main-theme);
 }
 
 /* skills */
@@ -160,7 +177,7 @@ h1 {
 }
 
 .skills__section__title {
-	color: var(--main-green);
+	color: var(--main-theme);
 	font-size: 2.5em;
 }
 
@@ -178,7 +195,8 @@ h1 {
 
 .skills__skill-unique__container:hover {
 	transition: 0.3s ease-in-out;
-	scale: 1.1;
+	transform: scale(1.1);
+	-webkit-transform: scale(1.1);
 	-webkit-box-shadow: 6px 5px 17px -3px rgba(0, 0, 0, 0.57);
 	box-shadow: 6px 5px 17px -3px rgba(0, 0, 0, 0.57);
 }
@@ -200,7 +218,7 @@ h1 {
 .bg-80 {
 	background: linear-gradient(
 		90deg,
-		var(--main-green) 80%,
+		var(--main-theme) 80%,
 		var(--main-light-gray) 20%
 	);
 }
@@ -208,7 +226,7 @@ h1 {
 .bg-70 {
 	background: linear-gradient(
 		90deg,
-		var(--main-green) 70%,
+		var(--main-theme) 70%,
 		var(--main-light-gray) 30%
 	);
 }
@@ -216,7 +234,7 @@ h1 {
 .bg-60 {
 	background: linear-gradient(
 		90deg,
-		var(--main-green) 60%,
+		var(--main-theme) 60%,
 		var(--main-light-gray) 40%
 	);
 }
@@ -224,7 +242,7 @@ h1 {
 .bg-50 {
 	background: linear-gradient(
 		90deg,
-		var(--main-green) 50%,
+		var(--main-theme) 50%,
 		var(--main-light-gray) 50%
 	);
 }
@@ -233,7 +251,7 @@ h1 {
 
 .portfolio__section {
 	padding: 5% 10%;
-	background-color: var(--main-green);
+	background-color: var(--main-theme);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -281,7 +299,8 @@ h1 {
 }
 
 .project__container:hover {
-	scale: 1.05;
+	transform: scale(1.05);
+	-webkit-transform: scale(1.05);
 	transition: 0.3s ease-in-out;
 }
 
@@ -317,7 +336,7 @@ h1 {
 }
 
 .about__underline {
-	border-bottom: solid 5px var(--main-green);
+	border-bottom: solid 5px var(--main-theme);
 }
 
 /* find me here section */
@@ -349,14 +368,14 @@ h1 {
 
 .fab:hover {
 	transition: 0.3s ease-in-out;
-	color: var(--main-green);
+	color: var(--main-theme);
 }
 
 /* contact me form section */
 
 .contact__section {
 	padding-bottom: 5%;
-	background-color: var(--main-green);
+	background-color: var(--main-theme);
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -386,9 +405,26 @@ h1 {
 	font-size: 1em;
 	padding-bottom: 0.2em;
 	color: var(--main-light-gray);
-	background-color: var(--main-green);
+	background-color: var(--main-theme);
 	border: none;
 	border-bottom: solid 1px var(--main-light-gray);
+}
+
+.contact__form input::-webkit-input-placeholder {
+	/* Chrome/Opera/Safari */
+	color: var(--main-light-gray);
+}
+.contact__form input::-moz-placeholder {
+	/* Firefox 19+ */
+	color: var(--main-light-gray);
+}
+.contact__form input:-ms-input-placeholder {
+	/* IE 10+ */
+	color: var(--main-light-gray);
+}
+.contact__form input:-moz-placeholder {
+	/* Firefox 18- */
+	color: var(--main-light-gray);
 }
 
 .contact__form input:focus,
@@ -446,7 +482,7 @@ h1 {
 .footer--line:after,
 .footer--line:before {
 	content: "\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0";
-	text-decoration: line-through 8px var(--main-green);
+	text-decoration: line-through 8px var(--main-theme);
 	margin: 15px;
 }
 
