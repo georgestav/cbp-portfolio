@@ -20,22 +20,25 @@ function draw() {
 }
 
 function line() {
-	listPoints.forEach((x, i, arr) => {
-		let arrayNoCurrent = arr.filter((value, index) => {
-			if (index !== i) {
-				let svgLine = `<line class="line fade-in-line" x1="${x[0]}" y1="${x[1]}" x2="${value[0]}" y2="${value[1]}"/>`;
+	if (listPoints.length < 2) {
+	} else {
+		console.log(listPoints.length, listPoints[listPoints.length - 1]);
+		listPoints.forEach((x) => {
+			let newPoint = listPoints[listPoints.length - 1];
+			if (x !== newPoint) {
+				let svgLine = `<line class="line fade-in-line" x1="${x[0]}" y1="${x[1]}" x2="${newPoint[0]}" y2="${newPoint[1]}"/>`;
 				svgLines.insertAdjacentHTML("afterbegin", svgLine);
 			}
 		});
-	});
+	}
 }
 
 var timesRun = 0;
 var interval = setInterval(function () {
 	timesRun++;
-	if (timesRun === 20) {
+	if (timesRun === 80) {
 		clearInterval(interval);
 	}
 	draw();
 	line();
-}, 3000);
+}, 500);
