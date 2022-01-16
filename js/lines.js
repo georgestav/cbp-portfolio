@@ -10,7 +10,7 @@ function genPosition() {
 }
 
 function genDot() {
-	let element = `<circle class="dots fade-in-dots" ${genPosition()} r="4"/>`;
+	let element = `<circle class="dots" ${genPosition()} r="5"/>`;
 	return element;
 }
 
@@ -26,7 +26,7 @@ function line() {
 		listPoints.forEach((x) => {
 			let newPoint = listPoints[listPoints.length - 1];
 			if (x !== newPoint) {
-				let svgLine = `<line class="line fade-in-line" x1="${x[0]}" y1="${x[1]}" x2="${newPoint[0]}" y2="${newPoint[1]}"/>`;
+				let svgLine = `<line class="line" x1="${x[0]}" y1="${x[1]}" x2="${newPoint[0]}" y2="${newPoint[1]}"/>`;
 				svgLines.insertAdjacentHTML("afterbegin", svgLine);
 			}
 		});
@@ -36,9 +36,9 @@ function line() {
 var timesRun = 0;
 var interval = setInterval(function () {
 	timesRun++;
-	if (timesRun === 80) {
+	if (timesRun === 30) {
 		clearInterval(interval);
 	}
 	draw();
 	line();
-}, 500);
+}, 3000);
