@@ -1,28 +1,29 @@
 #svg {
-	width: 100%;
-	height: 400px;
-	background-color: var(--main-dark-gray);
+  width: 100%;
+  height: 400px;
+  background-color: var(--main-dark-gray);
 }
+
 #svgLines {
-	width: 100%;
-	height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .dots {
-	fill: var(--main-theme);
-	animation: fadein 1.5s ease;
+  fill: var(--main-theme);
+  animation: fadein 1.5s ease;
 }
 
 .line {
-	stroke: rgba(235, 235, 235, 0.1);
-	animation: fadein 2s ease;
+  stroke: rgba(235, 235, 235, 0.1);
+  animation: fadein 2s ease;
 }
 
 @keyframes fadein {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
