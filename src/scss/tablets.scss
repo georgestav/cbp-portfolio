@@ -1,9 +1,11 @@
 // tablet sizes 768px to 1200px
-
 @media (max-width: 1000px) {
 	.header__links__container {
+		flex-direction: column;
 		a {
 			display: none;
+			width: 100%;
+			font-size: 2em;
 		}
 
 		.fas {
@@ -15,6 +17,14 @@
 				color: red;
 			}
 		}
+	}
+
+	.features__feature__dot {
+		display: none !important;
+	}
+
+	.features__feature {
+		margin: 10% 5% 0 !important;
 	}
 }
 
