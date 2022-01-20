@@ -30,8 +30,10 @@
 
 <body>
     <header id="home">
+
         <div class="header__logo__nav">
             <div class="logo">></div>
+            <!-- Navigation links (hidden by default) -->
             <nav class="header__links__container">
                 <a href="#home">HOME</a>
                 <a href="#skills">SKILLS</a>
@@ -39,6 +41,10 @@
                 <a href="#about-me">ABOUT ME</a>
                 <a href="#contact-me">CONTACT</a>
             </nav>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
         </div>
 
         <!-- presentation -->
@@ -214,6 +220,7 @@
             <h2 class="about__title">ABOUT ME</h2>
             <div class="about__description">
                 <img class="about__image" src="./img/660-300x300.jpg" alt="">
+                <br>
                 <div class="about__bio">
                     <p>
                         <strong>My name is Best Dev.</strong> I am a full-stack web developer and enjoy

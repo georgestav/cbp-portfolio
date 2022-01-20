@@ -1,8 +1,18 @@
+	/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
+	function myFunction() {
+		var x = document.getElementById("myLinks");
+		if (x.style.display === "block") {
+		  x.style.display = "none";
+		} else {
+		  x.style.display = "block";
+		}
+	  }
+
 (function () {
 	const container = document.getElementById("svg");
 	const svgLines = document.getElementById("svgLines");
 	const listPoints = [];
-
+	
 	function genPosition() {
 		let pLeft = Math.floor(Math.random() * (container.clientWidth - 10));
 		let pTop = Math.floor(Math.random() * (container.clientHeight - 10));
@@ -42,4 +52,7 @@
 		draw();
 		line();
 	}, 3000);
+
 })();
+
+
