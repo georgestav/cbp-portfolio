@@ -34,12 +34,12 @@
             <div class="logo">></div>
             <!-- todo: responsive nav, withought JS, managed to hide and display the bars  -->
             <nav class="header__links__container">
-                <a href="#home">HOME</a>
-                <a href="#skills">SKILLS</a>
-                <a href="#portfolio">PORTFOLIO</a>
-                <a href="#about-me">ABOUT ME</a>
-                <a href="#contact-me">CONTACT</a>
-                <i class="fas fa-bars"></i>
+                <a class="nav__items" href="#home">HOME</a>
+                <a class="nav__items" href="#skills">SKILLS</a>
+                <a class="nav__items" href="#portfolio">PORTFOLIO</a>
+                <a class="nav__items" href="#about-me">ABOUT ME</a>
+                <a class="nav__items" href="#contact-me">CONTACT</a>
+                <i class="fas fa-bars" id="burger"></i>
             </nav>
         </div>
 
@@ -297,6 +297,7 @@
 
 </body>
 <script src="./js/lines.js" async></script>
+<script src="./js/menu.js" async></script>
 <script>
     const date = new Date().getFullYear()
     document.getElementById('year').innerHTML = date;
