@@ -1,0 +1,62 @@
+// tablet sizes 768px to 1200px
+
+@media (max-width: 1000px) {
+	.header__links__container {
+		a {
+			display: none;
+		}
+
+		.fas {
+			display: inline;
+			font-size: 2em;
+			margin: 1em;
+
+			&:active {
+				color: red;
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+	.about__image {
+		width: 20em;
+		height: 20em;
+	}
+
+	.contact__form {
+		width: 80%;
+		row-gap: 2em;
+	}
+
+	.contact__form__row {
+		justify-content: space-evenly;
+	}
+
+	.footer__title {
+		color: var(--main-dark-gray);
+		font-size: 2em;
+		font-weight: bold;
+	}
+}
+
+@media (max-width: 1050px) {
+	.about__description {
+		flex-direction: column;
+		align-items: center;
+
+		.about__bio {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.about__cta {
+				text-align: center;
+				.custom--button {
+					margin: 0;
+					font-size: 1.5em;
+				}
+			}
+		}
+	}
+}

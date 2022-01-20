@@ -91,6 +91,12 @@ header {
 	padding: 1em 4em;
 }
 
+.header__links__container {
+	.fas {
+		display: none;
+	}
+}
+
 .header__links__container a:hover {
 	transition: 0.3s ease-in-out;
 	background-color: var(--main-theme);
@@ -339,7 +345,9 @@ h1 {
 .about__bio {
 	font-size: 1.1em;
 }
-
+.about__cta {
+	text-align: center;
+}
 .about__underline {
 	border-bottom: solid 5px var(--main-theme);
 }
@@ -494,3 +502,5 @@ h1 {
 .footer__container .fab {
 	font-size: 4em;
 }
+
+@import "./tablets.scss";
