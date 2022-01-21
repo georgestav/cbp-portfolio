@@ -507,9 +507,6 @@ h1 {
 
 @import "./tablets.scss";
 
-.display__burger__menu {
-	background-color: red;
-}
 @media screen and (max-width: 768px) {
 	/* Style the navigation menu */
 	.header__logo__nav {
@@ -534,7 +531,7 @@ h1 {
 
 	/* Style the hamburger menu */
 	.header__logo__nav a.icon {
-		background: black;
+		background: var(--main-dark-gray);
 		display: block;
 		position: absolute;
 		right: 0;
@@ -544,7 +541,7 @@ h1 {
 	/* Add a grey background color on mouse-over */
 	.header__logo__nav a:hover {
 		background-color: #ddd;
-		color: black;
+		color: var(--main-dark-gray);
 	}
 
 	/* Style the active link (or home/logo) */
