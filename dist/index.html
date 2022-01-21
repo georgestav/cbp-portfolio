@@ -33,15 +33,18 @@
 
         <div class="header__logo__nav">
             <div class="logo">></div>
+            <!-- Navigation links (hidden by default) -->
             <nav class="header__links__container">
-                <a class="nav__items" href="#home">HOME</a>
-                <a class="nav__items" href="#skills">SKILLS</a>
-                <a class="nav__items" href="#portfolio">PORTFOLIO</a>
-                <a class="nav__items" href="#about-me">ABOUT ME</a>
-                <a class="nav__items" href="#contact-me">CONTACT</a>
-                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-                <i class="fas fa-bars" id="burger"></i>
+                <a href="#home">HOME</a>
+                <a href="#skills">SKILLS</a>
+                <a href="#portfolio">PORTFOLIO</a>
+                <a href="#about-me">ABOUT ME</a>
+                <a href="#contact-me">CONTACT</a>
             </nav>
+                <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+                </a>
         </div>
 
         <!-- presentation -->
@@ -53,7 +56,7 @@
                 </div>
                 <div class="header__main__container">
                     <h1 class="header__main__title">
-                        Hi, I am <span class="header__name"> My name.</span>
+                        Hi, I am <span class="header__name">My name.</span>
                     </h1>
                     <h2 class="header__main__subtitle">
                         And I'm a Full-stack Web Developer.
@@ -243,7 +246,7 @@
                         Officiis, voluptas.
                     </p>
 
-                    <div class="about__cta">
+                    <div>
                         <h3>Get in touch and let's create something great together</h3>
                         <a class="custom--button" href="#contact-me">Contact me</a>
                     </div>
@@ -299,7 +302,6 @@
 
 </body>
 <script src="./js/lines.js" async></script>
-<script src="./js/menu.js" async></script>
 <script>
     const date = new Date().getFullYear()
     document.getElementById('year').innerHTML = date;
