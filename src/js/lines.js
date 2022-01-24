@@ -1,6 +1,6 @@
 	/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
 	function myFunction() {
-		var x = document.getElementById("myLinks");
+		let x = document.getElementById("myLinks");
 		if (x.style.display === "block") {
 		  x.style.display = "none";
 		} else {
@@ -21,12 +21,12 @@
 	}
 
 	function genDot() {
-		let element = `<circle class="dots" ${genPosition()} r="5"/>`;
+		const element = `<circle class="dots" ${genPosition()} r="5"/>`;
 		return element;
 	}
 
 	function draw() {
-		let point = svgLines.insertAdjacentHTML("beforeend", genDot());
+		const point = svgLines.insertAdjacentHTML("beforeend", genDot());
 		return point;
 	}
 
@@ -34,7 +34,7 @@
 		if (listPoints.length < 2) {
 		} else {
 			listPoints.forEach((x) => {
-				let newPoint = listPoints[listPoints.length - 1];
+				const newPoint = listPoints[listPoints.length - 1];
 				if (x !== newPoint) {
 					let svgLine = `<line class="line" x1="${x[0]}" y1="${x[1]}" x2="${newPoint[0]}" y2="${newPoint[1]}"/>`;
 					svgLines.insertAdjacentHTML("afterbegin", svgLine);
@@ -43,8 +43,8 @@
 		}
 	}
 
-	var timesRun = 0;
-	var interval = setInterval(function () {
+	let timesRun = 0;
+	let interval = setInterval(function () {
 		timesRun++;
 		if (timesRun === 30) {
 			clearInterval(interval);
